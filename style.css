@@ -709,6 +709,8 @@ footer>div>:last-child .select-btn img {
     background-color: white;
     transition: 0.5s;
     visibility: hidden;
+    z-index: 3;
+    border: 1px solid #ccc;
 }
 
 .search-pop>div {
