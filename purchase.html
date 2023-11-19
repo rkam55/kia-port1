@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3.0">
+    <title>KIA PURCHASE KJE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="purchase.css">
+    <style type="text/css"></style>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!----AOS-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!---slick JS--->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+</head>
+
+
+<body>
+
+
+    <script>
+        AOS.init({
+            duration: 2500,
+        })
+    </script>
+
+
+    <div w3-include-html="header.html"></div>
+
+
+    <main>
+
+        <div>
+            <div>
+                <img src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/ray-ev/24my/content/ray_feature_bg_pc.jpg">
+            </div>
+            <div data-aos="fade-left">
+                <img
+                    src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/represent/krtm138/ray-ev_tmjc5vo3e_a_eu3.png">
+            </div>
+            <div>
+                <div>
+                    <p data-aos="fade-right">작지만 가장 넓게 쓰이는, 생활 EV의 시작</p>
+                    <h3 data-aos="fade-right">the kia ray ev</h3>
+                    <h4 data-aos="fade-right">27,750,000<span> 원 부터</span></h4>
+                    <p data-aos="fade-right">서울시 기준 보조금 수령 시 2,128만원 부터<br>4인승 승용 라이트 기준</p>
+                    <div></div> <!---검정배경-->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+    <article class="information">
+        <div class="display-flex-flow">
+            <div>
+                <div class="display-flex mo">
+                    <button onclick="openPreparing()">시승 신청</button>
+                    <button onclick="openCalculator()" class="black-btn">견적 내기</button>
+                </div>
+                <h2>information</h2>
+            </div>
+            <div class="display-flex-flow">
+                <table>
+                    <tr>
+                        <td>출시일</td>
+                        <td>2023-09-21</td>
+                    </tr>
+                    <tr>
+                        <td>배터리 용량</td>
+                        <td>35.2 kWh</td>
+                    </tr>
+                    <tr>
+                        <td>최고 출력</td>
+                        <td>64 kW / 87 ps</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td>외장 컬러</td>
+                        <td>스모크 블루<br>클리어 화이트<br>밀키 베이지</td>
+                    </tr>
+                    <tr>
+                        <td>내장 컬러</td>
+                        <td><br>블랙 원톤<br><br></td>
+                    </tr>
+                    <tr>
+                        <td>옵션</td>
+                        <td>컴포트 II<br>드라이브 와이즈 II<br>스타일(에어)</td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <div class="display-flex-flow">
+                    <section>
+                        <img src="https://www.kia.com/content/dam/kwp/kr/ko/common/icon/usp_fuel_effeciency.svg">
+                        <p>205km 1회충전 최대주행<br>(도심 233km)</p>
+                    </section>
+                    <section>
+                        <img src="https://www.kia.com/content/dam/kwp/kr/ko/common/icon/usp_maximum_power.svg">
+                        <p>64.3kW 최고출력</p>
+                    </section>
+                    <section>
+                        <img src="https://www.kia.com/content/dam/kwp/kr/ko/common/icon/usp_ev_guarantee.svg">
+                        <p>10년/20만km 고전압 배터리</p>
+                    </section>
+                </div>
+            </div>
+            <div class="pc-flex">
+                <button onclick="openPreparing()">시승 신청</button>
+                <button onclick="openCalculator()" class="black-btn">견적 내기</button>
+            </div>
+        </div>
+    </article>
+
+
+    <div class="calculator">
+        <div>
+
+            <p class="close-calculator" onclick="closeCalculator()">✕</p>
+            <h3>할부 계산기</h3>
+
+            <ul id="cal-listtap">
+                <li class="tapsee">카니발</li>
+                <li>3.5 가솔린</li>
+                <li>프레스티지</li>
+            </ul>
+
+            <div class="pay">
+                <p>선수금</p>
+                <div class="slidecontainer flex_between_center">
+                    <div class="pst">
+                        <p class="p2-1">32만원</p>
+                        <p class="p2-2">2,882만원</p>
+                        <input type="range" min="32" max="2882" step="10" value="30" class="sliderRange" id="myRange"
+                            tooltips="">
+                    </div>
+                    <p class="box"><span id="demo"></span> 만원</p>
+                </div>
+            </div>
+
+            <div>
+                <p>할부 기간</p>
+                <div class="slidecontainer flex_between_center">
+                    <div class="pst">
+                        <p class="p2-1">3개월</p>
+                        <p class="p2-2">60개월</p>
+                        <input type="range" min="3" max="60" step="1" value="3" class="sliderRange2" id="myRange1">
+                    </div>
+                    <p class="box"><span id="value"></span> 개월</p>
+                </div>
+            </div>
+
+            <button><a>할부 상품 자세히 보기</a></button>
+
+        </div>
+
+        <div id="cal-black"></div>
+        <!---창 띄우면 바깥배경 어둡게 -->
+    </div>
+
+
+    <script>
+
+        function openPreparing() {
+            alert('준비중입니다.');
+        }
+        function openCalculator() {
+            // #cal-pop 클릭하면
+            document.querySelector(".calculator").style.display = "block";
+        }
+        function closeCalculator() {
+            // .close-calculator 클릭하면
+            document.querySelector(".calculator").style.display = "none";
+        }
+
+        // 할부 계산기 스크롤 게이지 색상
+        document.querySelector('.sliderRange').addEventListener('input', function (event) {
+            // .sliderRange : 할부계산기 input
+            // input 이벤트 발생 > 함수 실행
+            var gradient_value = 100 / event.target.attributes.max.value;
+            event.target.style.background = 'linear-gradient(to right, #262846 0%, #262846 ' + gradient_value * event.target.value + '%, #eee ' + gradient_value * event.target.value + '%, #eee';
+        });
+
+        document.querySelector('.sliderRange2').addEventListener('input', function (event) {
+            var gradient_value = 100 / event.target.attributes.max.value;
+            event.target.style.background = 'linear-gradient(to right, #262846 0%, #262846 ' + gradient_value * event.target.value + '%, #eee ' + gradient_value * event.target.value + '%, #eee';
+        });
+
+        // 할부 계산기
+        const rangeSlider = document.getElementById("myRange");
+        // myRange 아이디를 돔으로 연결
+        var output = document.getElementById("demo");
+        // demo 아이디를 돔으로 연결
+        output.innerHTML = rangeSlider.value;
+        //demo 안에 rangeSlider의 값을 넣어
+        // value : 32
+
+        rangeSlider.oninput = function () {
+            output.innerHTML = this.value;
+        }
+        // oninput: input 태그 안의 값들이 변경 될때마다 이벤트가 발생
+        // demo 안에 this(rangeSlider.oninput)의 값을 넣어
+        // 동그라미 움직이면 숫자가 지속적으로 변경됨
+
+        const pst = document.getElementById("myRange1");
+        const value = document.getElementById("value");
+        value.textContent = pst.value;
+        pst.oninput = function () {
+            value.textContent = this.value;
+        }
+
+        // 할부계산기 리스트
+        const calculatorList = document.querySelectorAll("#cal-listtap > li");
+
+        for (let i = 0; i < calculatorList.length; i++) {
+            calculatorList[i].addEventListener("click", function () {
+                clearCalculatorTap();
+                this.classList.add("tapsee");
+
+            });
+        }
+        function clearCalculatorTap() {
+            for (let i = 0; i < calculatorList.length; i++) {
+                calculatorList[i].classList.remove("tapsee");
+            }
+        }
+    </script>
+
+
+    <article class="color">
+        <div>
+
+            <div>
+                <h2>specifications</h2>
+            </div>
+
+            <div class="display-flex-flow">
+
+                <div>
+                    <div class="carColor-slide">
+                        <section>
+                            <img
+                                src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/represent/krtm138/ray-ev_tmjc5vo3e_n_ud.png">
+                        </section>
+                        <section>
+                            <img
+                                src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/represent/krtm138/ray-ev_tmjv1vp3e_a_m9y.png">
+                        </section>
+                        <section>
+                            <img
+                                src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/represent/krtm138/ray-ev_tmjc5vo3e_a_eu3.png">
+                        </section>
+                    </div>
+                    <div class="color-arrows">
+                        <button class="color-prev"><img
+                                src="https://cdn-icons-png.flaticon.com/128/6423/6423875.png"></button>
+                        <button class="color-next"><img
+                                src="https://cdn-icons-png.flaticon.com/128/6423/6423875.png"></button>
+                    </div>
+                    <p>상기 차량 이미지와 사양 구성은 차종, 차급 및 선택 사양에 따라 다르게 적용되며 색상은 실제 색상과 차이가 있을 수 있습니다.</p>
+                </div>
+
+                <div class="display-flex-flow">
+
+                    <div>
+                        <h4>제원</h4>
+                        <div class="display-flex-flow">
+                            <section>
+                                <div>
+                                    <img
+                                        src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/ray-ev/24my/spec/rayev_specification_front_image_pc.png">
+                                </div>
+                            </section>
+                            <section>
+                                <div>
+                                    <img
+                                        src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/ray-ev/24my/spec/rayev_specification_rear_image_pc.png">
+                                </div>
+                            </section>
+                            <section>
+                                <div>
+                                    <img
+                                        src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/ray-ev/24my/spec/rayev_specification_side_image_pc.png">
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div>
+                            <h4>에너지 소비 효율</h4>
+                        </div>
+                        <div class="effic-con" id="energy-con">
+                            <section>
+                                <h4>EV</h4>
+                                <div>
+                                    <h5>EV 2WD</h5>
+                                    <p>14인치 타이어</p>
+                                </div>
+                                <div>
+                                    <h5>전비 (km/kWh)</h5>
+                                    <p>복합 : 5.1 | 도심 : 6.0 | 고속도로 : 4.4</p>
+                                </div>
+                                <div>
+                                    <h5>1회 충전 주행거리 (km)</h5>
+                                    <p>복합 : 205 | 도심 : 233 | 고속도로 : 171</p>
+                                </div>
+                                <div>
+                                    <h5>연료 | 공차중량 (kg) | 축전지 정격전압 (V) | 용량 (Ah)</h5>
+                                    <p>전기 | 공차중량 : 1,295 | 정격전압 : 265 | 용량 : 133.5</p>
+                                </div>
+                            </section>
+                            <section>
+                                <h4>EV (1인승 / 2인승)</h4>
+                                <div>
+                                    <h5>EV 2WD (1인승 / 2인승)</h5>
+                                    <p>14인치 타이어</p>
+                                </div>
+                                <div>
+                                    <h5>전비 (km/kWh)</h5>
+                                    <p>복합 : 5.1 | 도심 : 6.0 | 고속도로 : 4.4</p>
+                                </div>
+                                <div>
+                                    <h5>1회 충전 주행거리 (km)</h5>
+                                    <p>복합 : 205 | 도심 : 233 | 고속도로 : 171</p>
+                                </div>
+                                <div>
+                                    <h5>연료 | 공차중량 (kg) | 축전지 정격전압 (V) | 용량 (Ah)</h5>
+                                    <p>전기 | 공차중량 : 1,290 | 정격전압 : 265 | 용량 : 133.5</p>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div>
+                            <h4>타이어 소비 효율</h4>
+                        </div>
+                        <div class="effic-con" id="tire-con">
+                            <section>
+                                <h4>Kumho</h4>
+                                <div>
+                                    <h5>모델명</h5>
+                                    <p>금호 (SOLUS TA51)</p>
+                                </div>
+                                <div>
+                                    <h5>회전저항(계수) 등급(RRC)</h5>
+                                    <p>2</p>
+                                </div>
+                                <div>
+                                    <h5>젖은 노면 제동력지수 등급(G)</h5>
+                                    <p>3</p>
+                                </div>
+                                <div>
+                                    <h5>타이어 소음도 표시 등급</h5>
+                                    <p>A</p>
+                                </div>
+                            </section>
+                            <ul>
+                                <li>* 회전저항 (RRC) : 타이어에 걸리는 하중에 대한 회전저항의 비율</li>
+                                <li>* 젖은 노면 제동력 (G) : 기준 타이어 대비 시험대상 타이어의 젖은 노면 제동성능 비율</li>
+                                <li>* 타이어 사이즈가 동일하더라도 효율등급이 다를 수 있습니다. 또한 일부 정보가 사전통보없이 변경될 수 있으므로 홈페이지를 참고하십시오.</li>
+                                <li>* 타이어 소비효율 등급은 1~5등급까지 있으며 1등급에 가까울수록 소비 효율이 높아집니다.
+                                </li>
+                                <li>* 타이어 소비효율 등급은 1~5등급까지 있으며 1등급에 가까울수록 젖은 노면에서의 제동력이 좋습니다.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </article>
+
+
+    <script>
+        // 차 색상 이미지 슬라이드
+        $('.carColor-slide').slick({
+            centerMode: false,
+            slidesToShow: 1,
+            infinite: true,
+            slidesToScroll: 1,
+            autoplay: false,
+            Speed: 2500,
+            draggable: true,
+            arrow: false,
+            prevArrow: ".color-prev",
+            nextArrow: ".color-next",
+            dots: true,
+            pauseOnHover: false,
+        });
+    </script>
+
+
+    <article class="brand">
+        <div class="display-flex-flow">
+
+            <div>
+                <h2>brand</h2>
+                <p>생활 EV의 시작, The Kia Ray EV</p>
+            </div>
+
+            <div>
+                <div>
+                    <img src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/ray-ev/24my/gallery/image/rayev_gallery_image_ray_rayev.jpg
+                    ">
+                    <div class="mo">
+                        <h5>지구가 칭찬할 것만 같은 기분이 드는 생활 EV</h5>
+                        <p>작지만 우리들의 일상에 가장 넓게 사용되는 지구환경적인 Kia Ray EV 입니다.</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/ray-ev/24my/content/rayev_2_seater_ban_side_mo.jpg
+                    ">
+                    <div class="mo">
+                        <h5>EAT. CHARGE.LOVE</h5>
+                        <p>100% 충전으로 마음이 꽉 찬 여러분에게 어울리는 Kia Ray EV 입니다.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="pc">
+                    <h2>Noice Canceling</h2>
+                    <p>어떤 순간도 방해되지 않도록 모든사람들에게 사랑받을 수 있는 기술을 가지고 있습니다. 파워풀하지만 조용한 무소음 주행을 원하시다면 Kia Ray EV를 기억해주세요.</p>
+                </div>
+                <div>
+                    <img src="https://www.kia.com/content/dam/kwp/descriptive/ic_play.svg">
+                    <img class="mo"
+                        src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/ray-ev/24my/content/rayev_brand_clap_mo.jpg">
+                    <img class="pc"
+                        src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/ray-ev/24my/content/rayev_brand_clap_lg.jpg">
+                </div>
+            </div>
+
+        </div>
+    </article>
+
+
+    <article class="option">
+        <div>
+
+            <div>
+                <h2>high-tech space</h2>
+                <p>경형 최대 하이테크 공간</p>
+            </div>
+
+            <div>
+                <img
+                    src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/represent/krtm138/ray-ev_tmjc5vo3e_a_eu3.png">
+                <div class="display-flex-flow" id="detail-options">
+                    <section onclick="openOption1()">
+                        <div>
+                            <img
+                                src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/ray-ev/24my/gallery/features/rayev_gallery_feature_shift_lever.jpg">
+                        </div>
+                        <p>lever</p>
+                    </section>
+                    <section onclick="openOption2()">
+                        <div>
+                            <img
+                                src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/ray-ev/24my/gallery/features/rayev_gallery_feature_14inch_wheel.jpg">
+                        </div>
+                        <p>wheel</p>
+                    </section>
+                    <section onclick="openOption3()">
+                        <div>
+                            <img
+                                src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/ray-ev/24my/gallery/features/rayev_gallery_feature_cluster.jpg">
+                        </div>
+                        <p>cluster</p>
+                    </section>
+                    <section onclick="openOption4()">
+                        <div>
+                            <img
+                                src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/ray-ev/24my/gallery/features/rayev_gallery_feature_brake_control.jpg">
+                        </div>
+                        <p>i-pedal</p>
+                    </section>
+                    <section class="pc" onclick="openOption5()">
+                        <div>
+                            <img src="https://www.kia.com/content/dam/kwp/kr/ko/spec/krtm138/psu.jpg">
+                        </div>
+                        <p>under-tray</p>
+                    </section>
+                </div>
+            </div>
+
+        </div>
+    </article>
+
+
+    <div class="option-pop">
+        <section class="option-con" id="option1">
+            <div>
+                <img
+                    src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/ray-ev/24my/gallery/features/rayev_gallery_feature_shift_lever.jpg">
+            </div>
+            <div>
+                <h3>컬럼 타입 전자식 변속 레버</h3>
+                <p>시동 버튼이 통합된 컬럼 타입 전자식 변속 레버가 적용되어 직관적인 조작이 가능하며 보다 심플하고 클린한 센터페시아를 구현하였습니다.</p>
+                <button onclick="closeOption()">닫기</button>
+            </div>
+        </section>
+        <section class="option-con" id="option2">
+            <div>
+                <img
+                    src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/ray-ev/24my/content/rayev_exterior_14_wheel_mo.jpg">
+            </div>
+            <div>
+                <h3>14인치 알로이 휠 (EV 전용)</h3>
+                <p>아이코닉한 4포크로 모던하고 균형이 잡힌 그래픽 재미를 전달합니다.</p>
+                <button onclick="closeOption()">닫기</button>
+            </div>
+        </section>
+        <section class="option-con" id="option3">
+            <div>
+                <img
+                    src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/ray-ev/24my/gallery/features/rayev_gallery_feature_cluster.jpg">
+            </div>
+            <div>
+                <h3>슈퍼비전 클러스터(10.25인치 칼라 TFT LCD)</h3>
+                <p>뛰어난 시인성과 다양한 컨텐츠를 제공하는 10.25인치 칼라 TFT LCD 클러스터를 적용하였습니다.</p>
+                <button onclick="closeOption()">닫기</button>
+            </div>
+        </section>
+        <section class="option-con" id="option4">
+            <div>
+                <img
+                    src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/ray-ev/24my/gallery/features/rayev_gallery_feature_brake_control.jpg">
+            </div>
+            <div>
+                <h3>i-pedal 모드</h3>
+                <p>브레이크 없이 감속과 제동이 가능합니다. 기어의ㅣ 단수를 올리고 내리는 기능이 아닌 회생 제동 레벨을 조절하거나 i-PEDAL을 활성화하는 기능을 합니다.</p>
+                <button onclick="closeOption()">닫기</button>
+            </div>
+        </section>
+        <section class="option-con" id="option5">
+            <div>
+                <img src="https://www.kia.com/content/dam/kwp/kr/ko/spec/krtm138/psu.jpg">
+            </div>
+            <div>
+                <h3>동승석 시트 언더트레이</h3>
+                <p>운전석 등받이를 앞으로 접을 수 있게 설계해 앞좌석에서 뒷좌석, 그리고 러기지 공간을 잇는 풀 플랫 실내공간을 제공합니다. 동승석 시트 아래 수납공간을 마련하여 적재성 및
+                    공간활용성을 높였습니다. 앞좌석 센터콘솔에 서랍장이 내장되어 있어 작은 소품들을 수납할 수 있습니다.</p>
+                <button onclick="closeOption()">닫기</button>
+            </div>
+        </section>
+        <div></div>
+    </div>
+
+
+    <script>
+        // 옵션 호버
+        // if문 : 피시는 흰글씨, 모바일 검정글씨
+        const detailOptions = document.querySelectorAll("#detail-options > section");
+
+        for (let i = 0; i < detailOptions.length; i++) {
+            detailOptions[i].addEventListener("mouseover", function () {
+                clearoption();
+                this.lastElementChild.style.opacity = "1";
+                this.lastElementChild.style.color = "#222";
+                this.lastElementChild.style.bottom = "-25px";
+                this.lastElementChild.style.transition = "0.3s";
+            })
+        }
+        function clearoption() {
+            for (let i = 0; i < detailOptions.length; i++) {
+                detailOptions[i].addEventListener("mouseout", function () {
+                    this.lastElementChild.style.opacity = "0";
+                    this.lastElementChild.style.color = "#ccc";
+                    this.lastElementChild.style.bottom = "0px";
+                })
+            }
+        }
+        // 옵션 클릭 : 팝업창 뜸
+        const optionPop = document.querySelector(".option-pop");
+        const option1 = document.querySelector("#option1");
+        const option2 = document.querySelector("#option2");
+        const option3 = document.querySelector("#option3");
+        const option4 = document.querySelector("#option4");
+        const option5 = document.querySelector("#option5");
+
+        function openOption1() {
+            optionPop.style.display = "block";
+            option1.style.display = "block";
+        };
+        function openOption2() {
+            optionPop.style.display = "block";
+            option2.style.display = "block";
+        };
+        function openOption3() {
+            optionPop.style.display = "block";
+            option3.style.display = "block";
+        };
+        function openOption4() {
+            optionPop.style.display = "block";
+            option4.style.display = "block";
+        };
+        function openOption5() {
+            optionPop.style.display = "block";
+            option5.style.display = "block";
+        };
+        function closeOption() {
+            optionPop.style.display = "none";
+            option1.style.display = "none";
+            option2.style.display = "none";
+            option3.style.display = "none";
+            option4.style.display = "none";
+            option5.style.display = "none";
+        };
+    </script>
+
+
+    <article class="feature">
+        <div>
+
+            <div>
+                <h2>feature</h2>
+            </div>
+
+            <div class="display-flex-flow">
+                <section data-aos="fade-up">
+                    <div>
+                        <img
+                            src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/ray-ev/24my/content/rayev_exterior_modern_simple_front_side_mo.jpg">
+                    </div>
+                    <div>
+                        <p>Modern and Simple</p>
+                        <h3>모던하고 심플한 디자인</h3>
+                        <p>모던하고 견고한 디자인에 심플함을 더한 Ray EV만의 새로운 매력을 선보입니다. 클린한 센터 가니쉬 위에 육각형 충전구 적용을 통해 전체적인 통일감을 유지하면서
+                            십플함을
+                            더합니다.</p>
+                    </div>
+                </section>
+                <section data-aos="fade-up">
+                    <div>
+                        <img
+                            src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/ray-ev/24my/content/rayev_driving_rear_side_anti_collision_mo.jpg">
+                    </div>
+                    <div>
+                        <p>No tress of driving</p>
+                        <h3>도심 주행 스트레스 <span>ZERO</span></h3>
+                        <p>차로 변경을 위해 방향 지시등 스위치 조작 시, 후측방 차량과 충돌 위험이 감지되면 경고를 해줍니다. 평행 주차 상태에서 전진 출차 중 후측방 차량과 충돌 위험이
+                            감지되면
+                            자동으로 제동을 도와줍니다.</p>
+                    </div>
+                </section>
+                <section data-aos="fade-up">
+                    <div>
+                        <img
+                            src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/ray-ev/24my/content/rayev_2_seater_ban_rear_side_mo.jpg">
+                    </div>
+                    <div>
+                        <p>Smart business life</p>
+                        <h3>스마트한 비즈니스 생활</h3>
+                        <p>2인승 밴인 Ray EV는 넓은 공간과 동승자 시트를 함께 갖춰 다양한 모빌리티 라이프를 즐길 수 있습니다. 함께하는 공간이라 더 즐거운 여유를 즐겨볼 수 있습니다.
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </article>
+
+
+    <article class="accessories">
+        <div>
+            <div>
+                <h2>kia genuine accessories</h2>
+                <p>기아 순정 액세서리</p>
+            </div>
+            <div class="acc-flex-container">
+                <section class="acc-section">
+                    <div></div>
+                    <div class="acc-text">
+                        <h3>carging cable</h3>
+                        <div class="pc">
+                            <h5>비상용 완속 충전 케이블</h5>
+                            <p>W_ICCB 사양의 비상용 완속 충전 케이블입니다. 가정 전기를 사용할 경우, 전기요금 및 전기 부하 문제가 발생할 수 있으니 주의 부탁드립니다.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="acc-section">
+                    <div></div>
+                    <div class="acc-text">
+                        <h3>sunglasses case</h3>
+                        <div class="pc">
+                            <h5>선바이저 선글라스 케이스</h5>
+                            <p>차량 실내 선바이저에 간편하게 장착하여 사용 가능한 선글라스 케이스입니다. 케이스 내부는 부드러운 재질로 되어있어 안전하게 보관하기 좋습니다.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="acc-section">
+                    <div></div>
+                    <div class="acc-text">
+                        <h3>Seatback Organizer</h3>
+                        <div class="pc">
+                            <h5>시트백 오거나이저</h5>
+                            <p>1열 시트 후면에 장착하여, 다양한 포켓을 원하는 위치에 부착하고 여러 물품을 적재할 수 있습니다. 타 차종과 호환이 가능합니다.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="acc-section">
+                    <div>
+                    </div>
+                    <div class="acc-text">
+                        <h3>Seatback Organizer</h3>
+                        <div class="pc">
+                            <h5>시트백 오거나이저 </h5>
+                            <p>2열 시트 후면에 장착하여, 다양한 포켓을 원하는 위치에 부착하고 여러 물품을 적재할 수 있습니다. 타 차종과의 호환이 가능합니다.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </article>
+
+
+    <script>
+        (function () {
+
+            $(".acc-section").each(function () {
+                $(this).hover(function () {
+                    $(this).find('.acc-text').css({
+                        opacity: '1',
+                        transition: '0.3s'
+                    });
+                }, function () {
+                    $(this).find('.acc-text').css({
+                        opacity: '0',
+                    });
+                }
+                )
+            });
+        })();
+    </script>
+
+
+    <article class="cs">
+        <div>
+            <div>
+                <h2><span>kia</span> 빠른 상담 문의</h2>
+            </div>
+            <div class="display-flex-flow">
+                <div>
+                    <div>
+                        <h3 class="pc">이름</h3>
+                        <input type="text" placeholder="이름을 입력해주세요." style="color:#ccc;">
+                    </div>
+                    <div>
+                        <h3 class="pc">연락처</h3>
+                        <input type="text" placeholder="연락처를 입력해주세요." style="color:#ccc;">
+                    </div>
+                    <div class="mo">
+                        <textarea placeholder="상담내용을 입력해주세요." cols="30" rows="5" style="color: #ccc;"></textarea>
+                    </div>
+                    <div class="display-flex">
+                        <div class="display-flex">
+                            <input type="checkbox" id="check1">
+                            <label for="check1"></label>
+                            <p>개인정보수집 및 이용 동의</p>
+                        </div>
+                        <button><a>자세히 보기</a></button>
+                    </div>
+                </div>
+                <div class="pc">
+                    <h3 class="pc">상담내용</h3>
+                    <textarea placeholder="상담내용을 입력해주세요." cols="30" rows="10" style="color:#ccc;"></textarea>
+                    <button><a>신청하기</a></button>
+                </div>
+                <button class="mo"><a>신청하기</a></button>
+            </div>
+        </div>
+    </article>
+
+
+    <div w3-include-html="footer.html"></div>
+
+
+    <script>
+        includeHTML();
+    </script>
+
+
+</body>
+
+
+</html>

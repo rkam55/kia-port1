@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3.0">
+    <title>KIA-LOGIN-KJE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="membership.css">
+    <style type="text/css"></style>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript"></script>
+    <!---주소 검색창-->
+    <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+</head>
+
+
+<body>
+
+
+    <div w3-include-html="header.html"></div>
+    
+
+    <article class="login">
+        <img src="image/kia_logo1.jpg">
+        <h1>login</h1>
+        <div>
+            <div>
+                <h2>로그인</h2>
+                <p>KIA에 오신 것을 환영합니다.</p>
+            </div>
+            <div>
+                <div>
+                    <input type="text" id="id" placeholder="아이디를 입력해주세요.">
+                    <input type="text" id="pw" placeholder="비밀번호를 입력해주세요.">
+                </div>
+                <div class="display-flex">
+                    <div class="display-flex">
+                        <input type="checkbox" name="save-id" id="save-id" class="check" id="check1">
+                        <p>아이디 저장</p>
+                    </div>
+                    <div class="display-flex">
+                        <button>아이디찾기</button>
+                        <button>비밀번호찾기</button>
+                    </div>
+                </div>
+                <div class="display-flex-flow">
+                    <button>로그인</button>
+                    <button class="black-btn">
+                        <a href="join.html">회원가입</a></button>
+                </div>
+                <div>
+                    <h4><span>KIA</span> 회원이 아니신가요?</h4>
+                    <p>간편 회원가입으로 빠르게<br><span>KIA</span>의 다양한 서비스를 만나보실 수 있습니다.</p>
+                    <button>
+                        <img src="image/google_icon.png">
+                        <p>구글 로그인</p>
+                    </button>
+                    <button>
+                        <img src="image/kakao_icon.png">
+                        <p>카카오톡 로그인</p>
+                    </button>
+                    <button>
+                        <img
+                            src="image/naver_icon.png">
+                        <p>네이버 로그인</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </article>
+
+
+    <article class="find-login">
+        <div>
+            <div>
+                <h2>회원정보 찾기</h2>
+                <p>아이디/비밀번호를 잊으셨나요?<br>찾으시려는 항목을 선택해주세요.</p>
+            </div>
+            <div>
+                <ul class="display-flex" id="findInformation">
+                    <li class="tapsee-find">아이디 찾기</li>
+                    <li>비밀번호 찾기</li>
+                </ul>
+                <section class="find-id">
+                    <div>
+                        <p>이름</p>
+                        <input type="text" id="your-name" placeholder="이름을 입력하세요.">
+                    </div>
+                    <div>
+                        <p>휴대폰 번호</p>
+                        <input type="text" id="pw2" placeholder="휴대폰 번호를 입력해주세요.">
+                    </div>
+                    <button class=" black-btn">아이디 찾기</button>
+                </section>
+                <section class="find-pw">
+                    <div>
+                        <p>아이디</p>
+                        <input type="text" id="your-id" placeholder="아이디를 입력하세요.">
+                    </div>
+                    <div class="display-flex">
+                        <p>아이디를 잊으셨나요?</p>
+                        <button>아이디 찾기</button>
+                    </div>
+                    <button class=" black-btn">비밀번호 찾기</button>
+                </section>
+            </div>
+    </article>
+
+
+    <script>
+        const findInformation = document.querySelectorAll("#findInformation > li");
+
+        for (let i = 0; i < findInformation.length; i++) {
+            findInformation[i].addEventListener("click", function () {
+                clearFindTap();
+                this.classList.add("tapsee-find");
+
+                if (i == 0) {
+                    document.querySelector(".find-id").style.display = "block";
+                    document.querySelector(".find-pw").style.display = "none";
+                }
+                else if (i == 1) {
+                    document.querySelector(".find-id").style.display = "none";
+                    document.querySelector(".find-pw").style.display = "block";
+                }
+
+            });
+        }
+        function clearFindTap() {
+            for (let i = 0; i < findInformation.length; i++) {
+                findInformation[i].classList.remove("tapsee-find");
+            }
+        }
+    </script>
+
+
+    <div w3-include-html="footer.html"></div>
+
+    <script>
+        includeHTML();
+    </script>
+
+
+</body>
+
+
+</html>

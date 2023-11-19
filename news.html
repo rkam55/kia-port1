@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3.0">
+    <title>KIA-NEWS-KJE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="posting.css">
+    <style type="text/css"></style>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript"></script>
+</head>
+
+
+<body>
+
+
+    <div w3-include-html="header.html"></div>
+
+
+    <article class="news">
+
+        <img src="image/kia_logo1.jpg">
+        <h1>news</h1>
+
+        <div>
+            <div>
+                <h2>kia 소식</h2>
+                <p>kIA 소식을 한 눈에 모아보세요.</p>
+            </div>
+            <div>
+                <h5>총 <span>102</span>건</h5>
+                <div class="display-flex">
+                    <select>
+                        <option>전체</option>
+                        <option>제목</option>
+                        <option>내용</option>
+                    </select>
+                    <div class="display-flex">
+                        <input type="text" placeholder="검색어를 입력하세요.">
+                        <img src="image/map_search_icon.png">
+                    </div>
+                </div>
+                <section>
+                    <div>
+                        <img
+                            src="image/news-con1.jpg">
+                    </div>
+                    <div>
+                        <h4>기아, 온실가스 감축 위한 ‘다자 협력’ 나선다</h4>
+                        <p>기아가 민·관 협력을 통해 온실가스 줄이기에 본격적으로 나선다. 차세대 자원순환 방법으로 평가받는 ‘바이오차(Bio-char)’ 프로젝트 투자를 통해 국내 온실가스
+                            감축에 기여하고 ESG 활동도 강화한다는 계획이다.</p>
+                        <p>2023-11-14</p>
+                    </div>
+                </section>
+                <section>
+                    <div>
+                        <img
+                            src="image/news-con2.jpg">
+                    </div>
+                    <div>
+                        <h4>기아, ‘더 뉴 카니발’ 사전계약 개시</h4>
+                        <p>기아가 이달 출시 예정인 ‘더 뉴 카니발’의 주요 사양과 가격을 공개하고 8일(수)부터 사전계약을 시작한다. 더 뉴 카니발은 2020년 8월 4세대 카니발 출시 이후
+                            3년 만에 새롭게 선보이는 상품성 개선 모델이다.</p>
+                        <p>2023-11-07</p>
+                    </div>
+                </section>
+                <section>
+                    <div>
+                        <img
+                            src="image/news-con3.jpg">
+                    </div>
+                    <div>
+                        <h4>기아 레이 EV, 이제 카셰어링으로 만난다</h4>
+                        <p>기아가 쏘카와 협업해 고객이 레이 EV를 보다 쉽게 경험할 수 있도록 한다.
+
+                            기아와 쏘카는 전국의 쏘카 공유차량 대여지점인 쏘카존에 ‘더 기아 레이 EV(이하 레이 EV)’를 배치하고 차량 공유 서비스를 실시한다고 6일(월) 밝혔다.</p>
+                        <p>2023-11-06</p>
+                    </div>
+                </section>
+                <section>
+                    <div>
+                        <img
+                            src="image/news-con4.jpg">
+                    </div>
+                    <div>
+                        <h4>기아, 더 뉴 K5 출시</h4>
+                        <p>기아가 ‘더 뉴 K5(The new K5, 이하 K5)’를 2일(목) 출시했다.
+
+                            이날 기아가 출시한 K5는 지난 2019년 출시한 3세대 K5의 상품성 개선 모델로 미래적이고 역동적인 디자인과 다양한 첨단사양을 적용해 더욱 높은 상품성을 갖췄다.
+                        </p>
+                        <p>2023-11-02</p>
+                    </div>
+                </section>
+                <section>
+                    <div>
+                        <img
+                            src="image/news-con5.jpg">
+                    </div>
+                    <div>
+                        <h4>기아, 자동차 부품용 신소재 공동 개발</h4>
+                        <p>기아가 협력사와 함께 세계 최초 기술을 적용한 차량 부품 신소재 공동 개발에 성공했다. 협력사 관계자는 “기아가 오랜 기간 협력을 지원하고 상호 성장할 수 있게 해줘
+                            감사하다”며, “앞으로도 기술개발을 위한 협력에 함께할 수 있기를 기대한다”고 밝혔다. </p>
+                        <p>2023-11-02</p>
+                    </div>
+                </section>
+                <div class="number" id="number2">
+                    <span class="numberPic">1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                </div>
+            </div>
+        </div>
+    </article>
+
+
+    <script>
+        // 뉴스 넘버 클릭
+        const newsNumbers = document.querySelectorAll(".news .number > span");
+        for (let i = 0; i < newsNumbers.length; i++) {
+            newsNumbers[i].addEventListener("click", function () {
+
+                clearNewsPage();
+                this.classList.add("numberPic");
+            });
+        }
+        function clearNewsPage() {
+            for (let i = 0; i < newsNumbers.length; i++) {
+                newsNumbers[i].classList.remove("numberPic");
+            }
+        }
+    </script>
+
+
+    <div w3-include-html="footer.html"></div>
+
+
+    <script>
+        includeHTML();
+    </script>
+
+
+</body>
+
+
+</html>

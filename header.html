@@ -1,0 +1,233 @@
+
+<header id="nav-scroll">
+    <div>
+
+        <img class="logo-img"
+            src="image/logo_w.svg">
+
+        <nav class="menu-nav" id="menu-nav">
+            <div>
+                <div class="mo">
+                    <p class="nav-close-btn" onclick="closeNavMenu()">✕</p>
+                    <div class="display-flex-flow">
+                        <button id="members-btn" class="black-btn">
+                            <img
+                                src="image/icon_home_1.svg">
+                            <a>기아 멤버스</a>
+                        </button>
+                        <button id="driving-btn"><a>드라이빙 아카데미</a></button>
+                    </div>
+                    <div>
+                        <div class="display-flex-flow">
+                            <div>
+                                <h4>로그인 <span>해주세요</span></h4>
+                                <p>회원가입 후 더 많은 혜택을 받아보세요</p>
+                            </div>
+                            <div>
+                                <a href="join.html">+ 간편회원가입</a>
+                            </div>
+                        </div>
+                        <div class="display-flex-flow">
+                            <button><a href="login.html">로그인</a></button>
+                            <button><a href="login.html">장바구니</a></button>
+                        </div> 
+                    </div>
+                    <input type="text" placeholder="궁금하신 제품을 찾아보세요.">
+                </div>
+                <ul id="mainMenu" class="mainMenu">
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="purchase.html">purchase</a></li>
+                    <li><a href="event.html">event</a></li>
+                    <li><a href="faq.html">faq</a></li>
+                    <li><a href="qna.html">qna</a></li>
+                    <li><a href="news.html">news</a></li>
+                    <li><a href="join.html">join us</a></li>
+                    <li><a href="login.html">login</a></li>
+                    <li><a href="remove.html">remove</a></li>
+                </ul>
+                <div class="display-flex-flow mo">
+                    <section class="navCateButton" id="nav-calculator">
+                        <img
+                            src="image/subnav_util_icon01.svg">
+                        <p>견적 내기</p>
+                    </section>
+                    <section class="navCateButton" id="nav-model">
+                        <img
+                            src="image/subnav_util_icon05.svg">
+                        <p>카탈로그/가격표</p>
+                    </section>
+                    <section class="navCateButton" id="cate-btn3">
+                        <img
+                            src="image/subnav_util_icon02.svg">
+                        <p>시승 신청</p>
+                    </section>
+                    <section class="navCateButton" id="cate-btn4">
+                        <img
+                            src="image/subnav_util_icon04.svg">
+                        <p>KIA 이벤트</p>
+                    </section>
+                </div>
+            </div>
+        </nav>
+
+        <div class="header-icons">
+            <div class="pc">
+                <a href="login.html"><img src="image/mypage_icon.png"></a>
+            </div>
+            <div class="select-lan">
+                <img class="language-btn"
+                    src="image/ic_global_w.svg">
+                <ul class="lan-options">
+                    <li class="lan-option">kr</li>
+                    <li class="lan-option">en</li>
+                    <li class="lan-option">cn</li>
+                </ul>
+            </div>
+            <div>
+                <img class="search-btn"
+                    src="image/icon_top_util_search.svg">
+            </div>
+            <div class="mo">
+                <img class="nav-open-btn" id="nav-open-btn"
+                    src="image/hamburger_icon.png">
+            </div>
+        </div>
+
+    </div>
+</header>
+
+
+<div class="calculator">
+    <div>
+        <p class="close-calculator" onclick="closeCalculator()">✕</p>
+        <h3>할부 계산기</h3>
+        <ul id="cal-listtap">
+            <li class="tapsee">카니발</li>
+            <li>3.5 가솔린</li>
+            <li>프레스티지</li>
+        </ul>
+        <div class="pay">
+            <p>선수금</p>
+            <div class="slidecontainer flex_between_center">
+                <div class="pst">
+                    <p class="p2-1">32만원</p>
+                    <p class="p2-2">2,882만원</p>
+                    <input type="range" min="32" max="2882" step="10" value="30" class="sliderRange" id="myRange"
+                        tooltips="">
+                </div>
+                <p class="box"><span id="demo"></span> 만원</p>
+            </div>
+        </div>
+        <div>
+            <p>할부 기간</p>
+            <div class="slidecontainer flex_between_center">
+                <div class="pst">
+                    <p class="p2-1">3개월</p>
+                    <p class="p2-2">60개월</p>
+                    <input type="range" min="3" max="60" step="1" value="3" class="sliderRange2" id="myRange1">
+                </div>
+                <p class="box"><span id="value"></span> 개월</p>
+            </div>
+        </div>
+        <button><a>할부 상품 자세히 보기</a></button>
+    </div>
+    <div id="cal-black"></div> <!---창 띄우면 바깥배경 어둡게 -->
+</div>
+
+
+<div class="model">
+    <div>
+        <p class="close-model" onclick="closeModel()">✕</p>
+        <h3>모델 비교</h3>
+        <ul id="model-listtap">
+            <li class="tapsee">카니발</li>
+            <li>3.5 가솔린</li>
+            <li>프레스티지</li>
+        </ul>
+        <div>
+            <section class="model1" id="model-list1">
+                <div>
+                    <div>
+                        <div>
+                            <img src="image/plus_btn.png">
+                            <p>비교할 모델을 추가해주세요.</p>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>가격<br>
+                            <span>31,800,000원</span>
+                        </li>
+                        <li>복합 연비<br>
+                            <span>9.1 km/ℓ</span>
+                        </li>
+                        <li>최고 출력<br>
+                            <span>294 ps / 6,400 rpm</span>
+                        </li>
+                        <li>최대 토크<br>
+                            <span>36.2 kg.m / 5,000 rpm</span>
+                        </li>
+                        <li>3년 유지비<br>
+                            <span>14,107,685원</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="model2" id="model-list2">
+                <div>
+                    <div>
+                        <div>
+                            <img src="image/plus_btn.png">
+                            <p>비교할 모델을 추가해주세요.</p>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>가격<br>
+                            <span>40,730,000원</span>
+                        </li>
+                        <li>복합 연비<br>
+                            <span>15.2 km/ℓ</span>
+                        </li>
+                        <li>최고 출력<br>
+                            <span>180 ps / 5,500 rpm</span>
+                        </li>
+                        <li>최대 토크<br>
+                            <span>27 kg.m / 1,500~4,500 rpm</span>
+                        </li>
+                        <li>3년 유지비<br>
+                            <span>10,123,011원</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="model3" id="model-list3">
+                <div>
+                    <div>
+                        <div>
+                            <img src="image/plus_btn.png">
+                            <p>비교할 모델을 추가해주세요.</p>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>가격<br>
+                            <span>55,340,000원</span>
+                        </li>
+                        <li>복합 연비<br>
+                            <span> 9.3 km/ℓ</span>
+                        </li>
+                        <li>최고 출력<br>
+                            <span>257 ps / 3,800 rpm</span>
+                        </li>
+                        <li>최대 토크<br>
+                            <span>36.2 kg.m / 1,500~3,000 rpm</span>
+                        </li>
+                        <li>3년 유지비<br>
+                            <span>15,322,685원</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div id="model-black"></div> <!---창 띄우면 바깥배경 어둡게? -->
+</div>
+
