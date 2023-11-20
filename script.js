@@ -88,14 +88,7 @@ function includeHTML() {
           closeModelPop.addEventListener("click", function () {
             navModelPop.style.display = "none";
           });
-
-          // null 이 계속 뜨는 이유 : .calculator 가 index / purchase 에만 있음
-          // include로 연결했는데 왜 인식을 못하지
-          // 생각해본 해결 방안 : header.html 에 팝업창 (할부계산기, 모델비교)을 넣고 style.css에 팝업창 스타일을 넣자
-          // 결과 : 해결됨 (결국 calculator는 header 태그 안에도 내용이 속해있기 때문에)
-          // 주의 : header 말고 purchase.html의 article에도 calculator를 사용해야함 (그럼 purchase.html에도 calculator 마크업을 해줘야함)
-
-
+          
           // 할부 계산기 스크롤 게이지 색상
           document.querySelector('.sliderRange').addEventListener('input', function (event) {
 
