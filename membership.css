@@ -116,7 +116,7 @@ select {
     border: 1px solid #aaa;
     cursor: pointer;
     appearance: none;
-    background: url('image/arrow_btn2.png') no-repeat;
+    background: url('image/icon-arrow-button2.png') no-repeat;
     background-position: right 8px center;
     background-size: 10px;
     font-size: 0.8rem;
@@ -549,8 +549,9 @@ header{
         padding: 15px;
     }
 
-    input[type="text"] {
+    input:not(input[type = "range"])  {
         padding: 15px;
+        font-size: 0.9rem;
     }
 
     input[type="checkbox"] {
