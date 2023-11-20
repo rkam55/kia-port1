@@ -659,8 +659,9 @@ header{
         padding: 15px;
     }
 
-    input[type="text"] {
+    input:not(input[type = "range"]) {
         padding: 15px;
+        font-size: 0.9rem;
     }
 
     input[type="checkbox"] {
@@ -785,7 +786,7 @@ header{
     .qna-board>div>:nth-child(2)>:first-child button {
         padding: 8px 30px;
     }
-
+    
     .news>div>:nth-child(2)>div:first-of-type{
         margin-bottom: 80px;
     }
