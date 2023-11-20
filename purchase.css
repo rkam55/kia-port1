@@ -768,25 +768,25 @@ main>:first-child>:last-child>div p:last-of-type {
 }
 
 .accessories>div>:nth-child(2) section:first-of-type>:first-child {
-    background: url("https://www.kia.com/content/dam/kwp/kr/ko/vehicles/ray-ev/24my/content/rayev_kga_charging_cable_pc.jpg") no-repeat;
+    background: url("image/purchase-accessories1.jpg") no-repeat;
     background-position: center right;
     background-size: cover;
 }
 
 .accessories>div>:nth-child(2) section:nth-of-type(2)>:first-child {
-    background: url("https://www.kia.com/content/dam/kwp/kr/ko/vehicles/ray-ev/24my/content/rayev_kga_sunglass_case_pc.jpg") no-repeat;
+    background: url("image/purchase-accessories2.jpg") no-repeat;
     background-position: center right;
     background-size: cover;
 }
 
 .accessories>div>:nth-child(2) section:nth-of-type(3)>:first-child {
-    background: url("https://www.kia.com/content/dam/kwp/kr/ko/vehicles/ray-ev/24my/content/rayev_kga_1seat_bag_pc.jpg") no-repeat;
+    background: url("image/purchase-accessories3.jpg") no-repeat;
     background-position: center right;
     background-size: cover;
 }
 
 .accessories>div>:nth-child(2) section:last-of-type>:first-child {
-    background: url("https://www.kia.com/content/dam/kwp/kr/ko/vehicles/ray-ev/24my/content/rayev_kga_2seat_bag_pc.jpg") no-repeat;
+    background: url("image/purchase-accessories4.jpg") no-repeat;
     background-position: center right;
     background-size: cover;
 }
