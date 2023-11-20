@@ -575,7 +575,7 @@ main>div>:last-child section>:last-child>:last-child {
 }
 
 .best>div div>div section>:nth-child(2) div {
-    background: url("image/share_icon.png") no-repeat center #eee;
+    background: url("image/icon-share-product.png") no-repeat center #eee;
     background-size: 40%;
     width: 30px;
     border-radius: 50%;
@@ -725,7 +725,7 @@ main>div>:last-child section>:last-child>:last-child {
 }
 
 .news {
-    background: url("image/news_background.jpg") no-repeat center;
+    background: url("image/news-background.jpg") no-repeat center;
     background-size: cover;
     position: relative;
     text-align: center;
